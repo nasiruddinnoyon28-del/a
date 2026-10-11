@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#050b18">
+<meta name="description" content="Portfolio of Md. Nasir Uddin Noyon — Digital Marketing, AI and Prompt Engineering.">
+<title>Md. Nasir Uddin Noyon | Digital Marketing & AI Portfolio</title>
+<style>
+:root{
+  --bg:#050b18;--bg2:#08152a;--panel:rgba(12,27,49,.68);--line:rgba(155,190,230,.16);
+  --cyan:#00eaff;--blue:#3988ff;--purple:#b34cff;--text:#f5f8ff;--muted:#aebfd7;
+  --grad:linear-gradient(105deg,var(--cyan),var(--blue) 52%,var(--purple));
+  --radius:22px;--max:1200px
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height:1.6;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;background:radial-gradient(ellipse at 75% 10%,rgba(0,190,255,.11),transparent 32%),radial-gradient(ellipse at 5% 45%,rgba(139,70,255,.08),transparent 30%),linear-gradient(180deg,#050b18,#071125 52%,#050b18)}
+a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}button,a{-webkit-tap-highlight-color:transparent}
+.container{width:min(var(--max),calc(100% - 44px));margin-inline:auto}
+.section{padding:100px 0;position:relative}
+.section-head{max-width:720px;margin-bottom:42px}
+.kicker{display:inline-flex;align-items:center;gap:10px;color:var(--cyan);font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+.kicker:before{content:"";height:2px;width:28px;background:var(--grad)}
+h2{font-size:clamp(2rem,4vw,3.2rem);line-height:1.1;letter-spacing:-.04em;margin:14px 0 15px}
+.gradient-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.section-head p,.muted{color:var(--muted)}
+.glass{background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.018));border:1px solid var(--line);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 20px 55px rgba(0,0,0,.16)}
+/* Navigation */
+.nav-wrap{position:fixed;top:0;left:0;right:0;z-index:100;border-bottom:1px solid transparent;transition:.25s}
+.nav-wrap.scrolled{background:rgba(5,11,24,.82);backdrop-filter:blur(20px);border-color:var(--line)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:-.03em;white-space:nowrap}
+.brand-mark{width:36px;height:36px;border-radius:12px;display:grid;place-items:center;background:var(--grad);color:#061021;font-weight:900;box-shadow:0 0 24px #00dfff25}
+.nav-links{display:flex;align-items:center;gap:25px;color:#c2d1e5;font-size:.9rem}
+.nav-links a{transition:color .2s}.nav-links a:hover,.nav-links a.active{color:var(--cyan)}
+.nav-cta{padding:10px 16px;border:1px solid rgba(0,234,255,.4);border-radius:999px;background:rgba(0,234,255,.06);font-size:.88rem}
+.menu-btn{display:none;border:1px solid var(--line);background:#0b1930;color:white;border-radius:12px;width:43px;height:43px;font-size:1.25rem}
+/* Hero */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;padding:125px 0 75px;isolation:isolate;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(4,10,22,.95),rgba(4,10,22,.83) 48%,rgba(4,10,22,.35)),url("assets/portfolio-banner.png") center/cover no-repeat;opacity:.32}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:50px;align-items:center}
+.availability{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);border-radius:999px;background:rgba(5,19,35,.7);padding:9px 14px;font-size:.78rem;color:#d9e8f9}
+.dot{width:8px;height:8px;border-radius:50%;background:#00f5a0;box-shadow:0 0 12px #00f5a0}
+.hero .eyebrow{display:flex;align-items:center;gap:12px;color:#a9bedb;letter-spacing:.17em;text-transform:uppercase;font-size:.75rem;margin-top:27px}
+.hero .eyebrow:before{content:"";height:3px;width:36px;background:var(--grad)}
+h1{font-size:clamp(2.7rem,5.4vw,5rem);line-height:1.03;letter-spacing:-.06em;margin:18px 0}
+h1 span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.role-line{font-size:clamp(1rem,1.5vw,1.25rem);color:#d7e5f7}
+.role-line span{color:var(--cyan);padding:0 6px}
+.hero-copy{max-width:640px;color:var(--muted);margin:19px 0 28px;font-size:1rem}
+.actions{display:flex;gap:13px;flex-wrap:wrap}
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:49px;padding:0 21px;border-radius:999px;border:1px solid rgba(0,234,255,.35);background:rgba(7,21,40,.72);color:#fff;font-weight:650;font-size:.9rem;overflow:hidden;cursor:pointer;transition:transform .22s,box-shadow .22s,border-color .22s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 13px 30px rgba(0,214,255,.13);border-color:var(--cyan)}
+.btn.primary{border:0;background:var(--grad);color:#041021;box-shadow:0 8px 26px rgba(0,150,255,.2)}
+.btn:after{content:"";position:absolute;width:12px;height:12px;border-radius:50%;left:var(--rx,-20px);top:var(--ry,-20px);background:#fff7;transform:translate(-50%,-50%) scale(0);pointer-events:none}
+.btn.ripple:after{animation:ripple .55s ease-out}
+@keyframes ripple{to{transform:translate(-50%,-50%) scale(24);opacity:0}}
+.hero-tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.pill{font-size:.78rem;color:#c6d7ed;padding:7px 11px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.035)}
+.hero-visual{min-height:470px;display:grid;place-items:center;position:relative;perspective:1000px}
+.portrait-ring{width:min(34vw,405px);min-width:260px;aspect-ratio:1;border-radius:50%;padding:7px;background:conic-gradient(from 15deg,var(--cyan),#287eff,var(--purple),var(--cyan));box-shadow:0 0 24px #00eaff75,0 0 85px #008cff26,0 0 100px #a54dff20;position:relative;animation:float 6s ease-in-out infinite;transform-style:preserve-3d;transition:transform .18s}
+.portrait-ring:before{content:"";position:absolute;inset:-17px;border:1px solid rgba(0,234,255,.28);border-radius:50%;animation:pulse 3.2s ease-in-out infinite}
+.portrait-inner{width:100%;height:100%;overflow:hidden;border-radius:50%;border:3px solid #071328;background:#0c2342}
+.portrait-inner img{width:100%;height:100%;object-fit:cover;object-position:center 22%;display:block}
+.visual-label{position:absolute;right:-2%;bottom:8%;padding:12px 16px;border-radius:14px;font-size:.75rem;color:#dceeff}
+.visual-label strong{color:var(--cyan);letter-spacing:.08em}
+.visual-orb{position:absolute;width:200px;height:200px;border-radius:50%;background:#00c8ff24;filter:blur(55px);z-index:-1}
+@keyframes float{0%,100%{translate:0 0}50%{translate:0 -12px}}@keyframes pulse{0%,100%{transform:scale(1);opacity:.35}50%{transform:scale(1.04);opacity:.8}}
+/* Stats / cards */
+.quick-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}
+.fact{padding:18px;border-radius:16px}.fact strong{display:block;font-size:1.05rem;color:var(--cyan)}.fact span{font-size:.78rem;color:var(--muted)}
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{position:relative;border-radius:var(--radius);padding:25px;overflow:hidden;transform-style:preserve-3d;transition:transform .18s,border-color .25s,box-shadow .25s}
+.card:before{content:"";position:absolute;inset:0;opacity:0;pointer-events:none;background:radial-gradient(circle at var(--sx,50%) var(--sy,0%),rgba(0,234,255,.13),transparent 48%);transition:opacity .25s}
+.card:hover:before{opacity:1}.card:hover{border-color:rgba(0,234,255,.4);box-shadow:0 24px 50px #0003,0 0 25px #00eaff0a}
+.card-icon{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(145deg,#00eaff20,#a54dff25);border:1px solid #00eaff20;color:var(--cyan);font-size:1.45rem;margin-bottom:20px}
+.card h3{font-size:1.13rem;margin:0 0 10px}.card p{color:var(--muted);font-size:.9rem;margin:0}
+.about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:45px;align-items:center}
+.about-panel{border-radius:28px;padding:30px;position:relative;overflow:hidden}
+.about-panel:after{content:"N.";position:absolute;right:-6px;bottom:-65px;font-size:12rem;font-weight:900;color:#ffffff06;letter-spacing:-.1em}
+.about-panel h3{font-size:1.5rem;margin:0 0 12px}.about-panel p{color:var(--muted)}
+.about-list{display:grid;gap:14px;margin-top:23px}.about-list div{display:flex;gap:12px;align-items:flex-start;color:#d5e2f2;font-size:.9rem}.check{color:var(--cyan);font-weight:900}
+.skill-list{display:grid;gap:20px}.skill-row{display:grid;gap:8px}.skill-meta{display:flex;justify-content:space-between;color:#dce8f8;font-size:.88rem}.skill-meta span:last-child{color:var(--muted);font-size:.8rem}.skill-track{height:7px;border-radius:20px;background:#ffffff0d;overflow:hidden;border:1px solid #ffffff0a}.skill-fill{height:100%;width:0;border-radius:20px;background:var(--grad);transition:width 1.2s ease}
+.projects-tools{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:25px}.filter{border:1px solid var(--line);border-radius:999px;padding:8px 15px;background:rgba(255,255,255,.03);color:#c7d8ee;cursor:pointer;font-size:.82rem}.filter.active,.filter:hover{background:rgba(0,234,255,.1);border-color:#00eaff7a;color:var(--cyan)}
+.project-card{padding:0}.project-art{height:175px;display:grid;place-items:center;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 40%,#00eaff2a,transparent 36%),linear-gradient(135deg,#0a2141,#0a1024 65%,#231144);border-bottom:1px solid var(--line)}
+.project-art:before,.project-art:after{content:"";position:absolute;border:1px solid #00eaff35;border-radius:50%;width:130px;height:130px;transform:rotateX(65deg)}.project-art:after{width:190px;height:190px;border-color:#b34cff38}
+.art-symbol{font-size:3rem;filter:drop-shadow(0 0 20px #00eaff50);z-index:1}.project-body{padding:22px}.project-body h3{margin:0 0 8px;font-size:1.06rem}.project-body p{margin:0;color:var(--muted);font-size:.86rem}.project-tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:15px}.project-tags span{font-size:.7rem;padding:5px 8px;border-radius:7px;background:#ffffff08;color:#bdd1e8;border:1px solid #ffffff0d}.demo-note{font-size:.8rem;color:#92a9c7;margin-top:16px}
+.journey{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{padding:23px;border-radius:20px}.step-num{font-size:.78rem;color:var(--cyan);letter-spacing:.12em}.step h3{margin:10px 0 8px}.step p{color:var(--muted);font-size:.88rem;margin:0}
+.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:25px}.contact-info{padding:28px;border-radius:24px}.contact-info h3{margin-top:0;font-size:1.4rem}.contact-info p{color:var(--muted);font-size:.92rem}.contact-line{display:flex;gap:13px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}.contact-line:last-child{border:0}.contact-symbol{width:39px;height:39px;display:grid;place-items:center;border-radius:12px;background:#00eaff12;color:var(--cyan)}.contact-line small{display:block;color:var(--muted);font-size:.75rem}.contact-form{padding:28px;border-radius:24px}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:grid;gap:7px;margin-bottom:15px}.field label{font-size:.83rem;color:#dce8f8}.field input,.field textarea{width:100%;border:1px solid var(--line);border-radius:12px;background:rgba(3,11,24,.62);color:#fff;padding:13px 14px;outline:none}.field input:focus,.field textarea:focus{border-color:#00eaff8a;box-shadow:0 0 0 3px #00eaff10}.field textarea{min-height:130px;resize:vertical}.form-status{color:var(--cyan);font-size:.84rem;margin-top:12px;min-height:20px}
+.footer{padding:28px 0;border-top:1px solid var(--line);color:#91a6c2;font-size:.82rem}.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}.back-top{width:38px;height:38px;border-radius:12px;border:1px solid var(--line);display:grid;place-items:center;color:var(--cyan)}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:980px){.hero-grid{grid-template-columns:1fr  .8fr;gap:25px}.card-grid{grid-template-columns:repeat(2,1fr)}.about-grid{gap:25px}.nav-links{gap:14px}.nav-links a{font-size:.82rem}.visual-label{right:0}}
+@media(max-width:760px){.container{width:min(100% - 34px,var(--max))}.section{padding:76px 0}.menu-btn{display:grid;place-items:center}.nav-cta{display:none}.nav-links{display:none;position:absolute;top:75px;left:17px;right:17px;padding:18px;border-radius:18px;background:rgba(5,13,27,.96);border:1px solid var(--line);backdrop-filter:blur(20px);flex-direction:column;align-items:stretch;gap:0}.nav-links.open{display:flex}.nav-links a{padding:12px 7px;border-bottom:1px solid #ffffff0a}.nav-links a:last-child{border:0}.hero{padding:115px 0 65px}.hero-grid{grid-template-columns:1fr;gap:18px}.hero-visual{order:-1;min-height:290px}.portrait-ring{width:245px;min-width:0}.visual-label{bottom:0;right:0}.hero .eyebrow{margin-top:14px}h1{font-size:clamp(2.5rem,11vw,4rem)}.quick-facts{gap:8px}.fact{padding:13px}.fact strong{font-size:.9rem}.fact span{font-size:.68rem}.about-grid,.contact-grid{grid-template-columns:1fr}.card-grid,.journey{grid-template-columns:1fr 1fr}.about-panel{padding:25px}}
+@media(max-width:500px){.card-grid,.journey{grid-template-columns:1fr}.form-row{grid-template-columns:1fr;gap:0}.actions .btn{flex:1 1 100%}.skills{grid-template-columns:repeat(2,1fr)}.footer-inner{align-items:flex-start;flex-direction:column}.portrait-ring{width:220px}.visual-label{font-size:.67rem}.quick-facts{grid-template-columns:1fr}.fact{display:flex;justify-content:space-between;align-items:center}.fact strong{font-size:.9rem}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header class="nav-wrap" id="top">
+  <nav class="nav container" aria-label="Main navigation">
+    <a class="brand" href="#home"><span class="brand-mark">N.</span><span>NASIR<span class="gradient-text">.</span></span></a>
+    <div class="nav-links" id="navLinks">
+      <a href="#home" class="active">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#journey">Learning</a><a href="#contact">Contact</a>
+    </div>
+    <a class="nav-cta" href="#contact">Let's Talk ↗</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div class="hero-copy-wrap reveal">
+      <div class="availability"><span class="dot"></span> Open to meaningful opportunities</div>
+      <div class="eyebrow">Welcome to my portfolio</div>
+      <h1>Md. Nasir Uddin <span>Noyon</span></h1>
+      <div class="role-line">Digital Marketer <span>|</span> AI Enthusiast <span>|</span> Prompt Engineering Learner</div>
+      <p class="hero-copy">I’m passionate about digital marketing, artificial intelligence and prompt engineering. I’m learning, experimenting and building practical ideas to help people and businesses communicate and grow online.</p>
+      <div class="actions"><a class="btn primary" href="#projects">✦ Explore My Work <span>→</span></a><a class="btn" href="#contact">✉ Let's Collaborate</a></div>
+      <div class="hero-tags"><span class="pill">Digital Marketing</span><span class="pill">AI Tools</span><span class="pill">Prompt Engineering</span></div>
+      <div class="quick-facts">
+        <div class="fact glass"><strong>Learn</strong><span>Build skills step by step</span></div>
+        <div class="fact glass"><strong>Create</strong><span>Explore useful ideas</span></div>
+        <div class="fact glass"><strong>Improve</strong><span>Practice and iterate</span></div>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="visual-orb"></div>
+      <div class="portrait-ring" id="portraitRing"><div class="portrait-inner"><img src="assets/portfolio-banner.png" alt="Portfolio artwork for Md. Nasir Uddin Noyon"></div></div>
+      <div class="visual-label glass"><strong>AI • DIGITAL • CREATIVE</strong><br>Learning. Building. Growing.</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+ <div class="container about-grid">
+  <div class="section-head reveal"><span class="kicker">A little about me</span><h2>Curious mind.<br><span class="gradient-text">Practical creativity.</span></h2><p>I’m developing my skills across digital marketing and AI-assisted workflows. My focus is on learning the fundamentals, testing ideas and presenting work clearly and professionally.</p><p>Rather than claiming experience I haven’t earned, I prefer to show practice projects, learning progress and real work as I build it.</p></div>
+  <div class="about-panel glass reveal"><h3>My approach</h3><p>Good digital work starts with understanding the audience, setting a clear goal and choosing the right tools. AI can support the process, but thoughtful strategy and human judgment matter too.</p><div class="about-list"><div><span class="check">✦</span><span>Learn with a clear goal and a practical project.</span></div><div><span class="check">✦</span><span>Use AI tools thoughtfully to explore and refine ideas.</span></div><div><span class="check">✦</span><span>Keep communication honest, simple and audience-focused.</span></div><div><span class="check">✦</span><span>Improve through feedback, practice and consistency.</span></div></div></div>
+ </div>
+</section>
+
+<section class="section" id="services">
+ <div class="container">
+  <div class="section-head reveal"><span class="kicker">What I’m exploring</span><h2>Skills & <span class="gradient-text">focus areas</span></h2><p>These are the areas I’m learning and developing. The exact scope of any project can be discussed before work begins.</p></div>
+  <div class="card-grid">
+   <article class="card glass reveal"><div class="card-icon">↗</div><h3>Digital Marketing</h3><p>Learning audience research, campaign planning, content strategy and the fundamentals of online growth.</p></article>
+   <article class="card glass reveal"><div class="card-icon">◎</div><h3>Social Media Content</h3><p>Planning clear, engaging post ideas and creating content concepts that fit a brand’s voice and audience.</p></article>
+   <article class="card glass reveal"><div class="card-icon">✳</div><h3>AI-assisted Workflows</h3><p>Exploring AI tools to support brainstorming, research, drafting and repeatable creative tasks.</p></article>
+   <article class="card glass reveal"><div class="card-icon">⌘</div><h3>Prompt Engineering</h3><p>Practising how to write clear instructions, add useful context and refine outputs for specific goals.</p></article>
+   <article class="card glass reveal"><div class="card-icon">▧</div><h3>Creative Concepts</h3><p>Developing ideas for banners, visual campaigns and promotional concepts with AI-assisted design tools.</p></article>
+   <article class="card glass reveal"><div class="card-icon">⌁</div><h3>Learning & Research</h3><p>Breaking complex topics into steps, documenting experiments and improving through structured practice.</p></article>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="skills">
+ <div class="container about-grid">
+  <div class="section-head reveal"><span class="kicker">My learning toolkit</span><h2>Skills in <span class="gradient-text">progress</span></h2><p>I’m building these skills through study and hands-on practice. The bars are visual indicators of learning focus, not formal proficiency scores.</p></div>
+  <div class="skill-list glass" style="padding:28px;border-radius:24px">
+   <div class="skill-row"><div class="skill-meta"><span>Prompt Writing & Iteration</span><span>Learning</span></div><div class="skill-track"><div class="skill-fill" data-width="68%"></div></div></div>
+   <div class="skill-row"><div class="skill-meta"><span>Digital Marketing Fundamentals</span><span>Learning</span></div><div class="skill-track"><div class="skill-fill" data-width="62%"></div></div></div>
+   <div class="skill-row"><div class="skill-meta"><span>AI Tools & Creative Workflows</span><span>Learning</span></div><div class="skill-track"><div class="skill-fill" data-width="65%"></div></div></div>
+   <div class="skill-row"><div class="skill-meta"><span>Content Planning</span><span>Learning</span></div><div class="skill-track"><div class="skill-fill" data-width="58%"></div></div></div>
+   <p class="muted" style="font-size:.78rem;margin:4px 0 0">These percentages are illustrative display values. Update them to reflect your own progress.</p>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="projects">
+ <div class="container">
+  <div class="section-head reveal"><span class="kicker">Practice gallery</span><h2>Selected <span class="gradient-text">concept projects</span></h2><p>These are portfolio concept examples to demonstrate the kinds of work I’m practising. They are not presented as paid client projects or proven results.</p></div>
+  <div class="projects-tools reveal"><button class="filter active" data-filter="all">All concepts</button><button class="filter" data-filter="marketing">Marketing</button><button class="filter" data-filter="ai">AI & Prompts</button><button class="filter" data-filter="creative">Creative</button></div>
+  <div class="card-grid" id="projectGrid">
+   <article class="card project-card glass reveal" data-category="marketing"><div class="project-art"><span class="art-symbol">▤</span></div><div class="project-body"><h3>Social Media Content Plan</h3><p>A sample content calendar concept with audience, theme and post-format planning.</p><div class="project-tags"><span>Content</span><span>Planning</span><span>Concept</span></div></div></article>
+   <article class="card project-card glass reveal" data-category="ai"><div class="project-art"><span class="art-symbol">✳</span></div><div class="project-body"><h3>Prompt Engineering Toolkit</h3><p>A learning project for structuring prompts with role, task, context, constraints and output format.</p><div class="project-tags"><span>AI</span><span>Prompt Design</span><span>Practice</span></div></div></article>
+   <article class="card project-card glass reveal" data-category="creative"><div class="project-art"><span class="art-symbol">◈</span></div><div class="project-body"><h3>AI Visual Campaign Concept</h3><p>A sample creative direction for a modern digital campaign, from mood to image prompt.</p><div class="project-tags"><span>Visuals</span><span>AI Tools</span><span>Concept</span></div></div></article>
+   <article class="card project-card glass reveal" data-category="marketing"><div class="project-art"><span class="art-symbol">↗</span></div><div class="project-body"><h3>Small Business Growth Plan</h3><p>A practice framework covering goals, audience, content themes and measurement ideas.</p><div class="project-tags"><span>Strategy</span><span>Research</span><span>Practice</span></div></div></article>
+   <article class="card project-card glass reveal" data-category="ai"><div class="project-art"><span class="art-symbol">⌘</span></div><div class="project-body"><h3>AI Learning Notes</h3><p>A structured learning resource concept for explaining AI terms in beginner-friendly language.</p><div class="project-tags"><span>Education</span><span>AI</span><span>Writing</span></div></div></article>
+   <article class="card project-card glass reveal" data-category="creative"><div class="project-art"><span class="art-symbol">✧</span></div><div class="project-body"><h3>Product Promotion Concept</h3><p>A sample storyboard and prompt idea for a clean, premium product advertisement.</p><div class="project-tags"><span>Storyboarding</span><span>Creative</span><span>Concept</span></div></div></article>
+  </div>
+  <p class="demo-note">Tip: Replace these concept cards with real work samples as you complete them. Add only verified details and results.</p>
+ </div>
+</section>
+
+<section class="section" id="journey">
+ <div class="container">
+  <div class="section-head reveal"><span class="kicker">Continuous development</span><h2>My learning <span class="gradient-text">journey</span></h2><p>A simple framework for the way I approach growth in digital marketing and AI.</p></div>
+  <div class="journey">
+   <article class="step glass reveal"><span class="step-num">PHASE 01</span><h3>Learn the fundamentals</h3><p>Understand core concepts, study examples and build a reliable foundation.</p></article>
+   <article class="step glass reveal"><span class="step-num">PHASE 02</span><h3>Practise with projects</h3><p>Turn lessons into small, clearly defined practice projects and document the process.</p></article>
+   <article class="step glass reveal"><span class="step-num">PHASE 03</span><h3>Review & improve</h3><p>Use feedback, reflection and iteration to improve quality and communicate progress honestly.</p></article>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="contact">
+ <div class="container">
+  <div class="section-head reveal"><span class="kicker">Get in touch</span><h2>Have an idea? <span class="gradient-text">Let’s connect.</span></h2><p>For collaborations, learning opportunities or project discussions, send a message. Add your real contact details before publishing this website.</p></div>
+  <div class="contact-grid">
+   <div class="contact-info glass reveal"><h3>Contact details</h3><p>I’m happy to connect with people interested in digital marketing, AI and creative problem-solving.</p>
+    <div class="contact-line"><span class="contact-symbol">✉</span><div><small>Email</small><span id="emailDisplay">your-email@example.com</span></div></div>
+    <div class="contact-line"><span class="contact-symbol">⌖</span><div><small>Location</small><span>Sirajganj, Bangladesh</span></div></div>
+    <div class="contact-line"><span class="contact-symbol">↗</span><div><small>Focus</small><span>Digital Marketing • AI • Prompt Engineering</span></div></div>
+    <p class="muted" style="font-size:.76rem">Replace the placeholder email and add your own social profile links before publishing.</p>
+   </div>
+   <form class="contact-form glass reveal" id="contactForm">
+    <div class="form-row"><div class="field"><label for="name">Your name</label><input id="name" name="name" placeholder="Enter your name" required></div><div class="field"><label for="email">Your email</label><input id="email" name="email" type="email" placeholder="you@example.com" required></div></div>
+    <div class="field"><label for="subject">Subject</label><input id="subject" name="subject" placeholder="What would you like to discuss?" required></div>
+    <div class="field"><label for="message">Message</label><textarea id="message" name="message" placeholder="Write your message..." required></textarea></div>
+    <button class="btn primary" type="submit">Prepare Email <span>→</span></button><div class="form-status" id="formStatus" role="status"></div>
+    <p class="muted" style="font-size:.75rem;margin-bottom:0">This demo opens your email app; it does not store or send messages through a server.</p>
+   </form>
+  </div>
+ </div>
+</section>
+</main>
+<footer class="footer"><div class="container footer-inner"><span>© <span id="year"></span> Md. Nasir Uddin Noyon. Built with curiosity and creativity.</span><span>Digital Marketing · AI · Prompt Engineering</span><a class="back-top" href="#home" aria-label="Back to top">↑</a></div></footer>
+
+<script>
+const navWrap=document.querySelector('.nav-wrap'),menuBtn=document.querySelector('#menuBtn'),navLinks=document.querySelector('#navLinks');
+window.addEventListener('scroll',()=>navWrap.classList.toggle('scrolled',window.scrollY>20),{passive:true});
+menuBtn.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));menuBtn.textContent=open?'×':'☰'});
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰'}));
+document.querySelector('#year').textContent=new Date().getFullYear();
+
+// Reveal sections on scroll.
+const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if('IntersectionObserver'in window&&!reduceMotion){
+ const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});
+ document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+}else{document.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible'))}
+
+// Animate skill indicators when their section becomes visible.
+const skillSection=document.querySelector('#skills');
+if('IntersectionObserver'in window&&!reduceMotion){
+ const skillObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){document.querySelectorAll('.skill-fill').forEach(bar=>bar.style.width=bar.dataset.width);skillObserver.disconnect()}}),{threshold:.25});
+ skillObserver.observe(skillSection);
+}else{document.querySelectorAll('.skill-fill').forEach(bar=>bar.style.width=bar.dataset.width)}
+
+// Project category filters.
+document.querySelectorAll('.filter').forEach(btn=>btn.addEventListener('click',()=>{
+ document.querySelectorAll('.filter').forEach(b=>b.classList.remove('active'));btn.classList.add('active');
+ document.querySelectorAll('.project-card').forEach(card=>{const show=btn.dataset.filter==='all'||card.dataset.category===btn.dataset.filter;card.style.display=show?'':'none'});
+}));
+
+// Subtle pointer tilt and glass highlight on cards and portrait.
+if(window.matchMedia('(pointer:fine)').matches&&!reduceMotion){
+ document.querySelectorAll('.card,.portrait-ring').forEach(card=>{
+  card.addEventListener('pointermove',e=>{const r=card.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;card.style.setProperty('--sx',`${x*100}%`);card.style.setProperty('--sy',`${y*100}%`);
+   if(card.classList.contains('portrait-ring'))card.style.transform=`perspective(900px) rotateX(${(0.5-y)*8}deg) rotateY(${(x-0.5)*10}deg) translateY(-4px)`;
+   else card.style.transform=`perspective(900px) rotateX(${(0.5-y)*3}deg) rotateY(${(x-0.5)*3}deg) translateY(-2px)`;
+  });
+  card.addEventListener('pointerleave',()=>{card.style.transform='';card.style.removeProperty('--sx');card.style.removeProperty('--sy')});
+ });
+}
+document.querySelectorAll('.btn').forEach(btn=>btn.addEventListener('pointerdown',e=>{const r=btn.getBoundingClientRect();btn.style.setProperty('--rx',`${e.clientX-r.left}px`);btn.style.setProperty('--ry',`${e.clientY-r.top}px`);btn.classList.remove('ripple');void btn.offsetWidth;btn.classList.add('ripple')}));
+
+// Contact form creates a draft in the user's email app; no fake backend.
+document.querySelector('#contactForm').addEventListener('submit',e=>{
+ e.preventDefault();
+ const data=new FormData(e.currentTarget);
+ const recipient='your-email@example.com';
+ const subject=encodeURIComponent(`[Portfolio inquiry] ${data.get('subject')}`);
+ const body=encodeURIComponent(`Name: ${data.get('name')}\nReply email: ${data.get('email')}\n\n${data.get('message')}`);
+ if(recipient==='your-email@example.com'){
+  document.querySelector('#formStatus').textContent='Before using the form, replace your-email@example.com with your real email in index.html.';
+  return;
+ }
+ document.querySelector('#formStatus').textContent='Opening your email app…';
+ window.location.href=`mailto:${recipient}?subject=${subject}&body=${body}`;
+});
+</script>
+</body>
+</html>
